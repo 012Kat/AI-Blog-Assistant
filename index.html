@@ -1,0 +1,45 @@
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Generate blog drafts instantly using AI">
+  <title>AI Blog Assistant</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>HelpBot</h1>
+      <p>Generate blog drafts instantly using AI</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="card">
+      <div class="input-group">
+        <input type="text" id="topic" placeholder="Enter blog topic..." aria-label="Blog topic" />
+        <button id="generate" class="primary-button">
+          <span class="button-text">Generate Blog</span>
+          <span class="spinner hidden" id="spinner"></span>
+        </button>
+      </div>
+
+      <section id="output-section" class="hidden" aria-live="polite">
+        <h2>Generated Blog:</h2>
+        <div class="output-container">
+          <textarea id="blog-output" readonly aria-label="Generated blog content"></textarea>
+          <div class="output-actions">
+            <button id="copy-button" class="secondary-button">Copy</button>
+            <button id="download-button" class="secondary-button">Download</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="script.js" type="module"></script>
+</body>
+</html>
